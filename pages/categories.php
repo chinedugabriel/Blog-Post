@@ -12,11 +12,11 @@
     <!-- bootstrap link ends here -->
     <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
 </head>
-<body class="bg-primary p-0 ">
-    <section class="vh-sm-100 ">
-        <div class="container-md mt-sm-5">
-            <div class="row border">
-                <div class="col-sm-2 border py-3 d-flex flex-column gap-4">
+<body class="">
+    <section class="">
+        <div class="container-fluid">
+            <div class="row vh-100">
+                <div class="col-sm-12 col-md-2 py-3 d-flex flex-column gap-5 bg-primary">
                     <div class="row">
                         <div class="col-md-12 text-center p-0">
                             <img src="../src/img/blog_logo.png" alt="logo" class="img-fluid w-50 w-md-75 border-bottom img-logo ">
@@ -26,22 +26,22 @@
                         <div class="col-md-12 p-0">
                             <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around">
                                 <li class="text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/all_post" class="text-white text-decoration-none">
                                         All Post
                                     </a>
                                 </li>
                                 <li class=" text-center  py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/add_post" class="text-white text-decoration-none">
                                         Add Post
                                     </a>
                                 </li>
                                 <li class=" text-center border bg-white text-primary py-2">
-                                    <a href="#" class="text-primary text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/categories" class="text-primary text-decoration-none">
                                         Catagories
                                     </a>
                                 </li>
                                 <li class=" text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/comments" class="text-white text-decoration-none">
                                         Comments
                                     </a>
                                 </li>
@@ -50,7 +50,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-auto">
                         <div class="col-md-12 text-center">
                             <button class="btn py-md-2 px-md-5 btn bg-white text-primary">
                                Logout                         
@@ -58,15 +58,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-9 pt-3">
+                <div class="col-sm-12 col-md-10  pt-3 p-start-2">
                 <!-- <form action="" method="" class="d-grid gap-1 p-3 pt-0 h-100"> -->
-                        <div class="row">
+                        <div class="row py-3 border-bottom border-primary">
                             <div class="col-md-12 text-center">
-                                <p class="display-5 text-white">Categories</p>
+                                <p class="h1 text-primary">Categories</p>
                             </div>
                         </div>
-                        <div class="row border">
-                            <div class="col-md-8 d-grid gap-3 py-3 px-5 border-end">
+                        <div class="row pt-3">
+                            <div class="col-md-7 offset-md-1 py-3 ">
                                 <div class="row">
                                     <div class="col-md-12 ">
                                         <table class="table table-primary table-striped">
@@ -127,14 +127,13 @@
                                         </table>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="col-md-4 d-flex flex-column gap-3 gap-md-0 justify-content-between py-3 px-5 ">
+                            <div class="col-md-2 offset-md-1 d-flex flex-column gap-3 gap-md-0 justify-content-between py-3 shadow">
                                 <form action="" method="post">
                                     
                                     <div class="row">
-                                        <div class="col-sm-12">
-                                            <p class="text-white p-0">Add Category</p>
+                                        <div class="col-sm-12 text-center">
+                                            <p class="text-primary p-0 h3">Add Category</p>
                                         </div>
                                     </div>
                                     <div class="row my-3">

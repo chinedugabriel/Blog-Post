@@ -22,10 +22,10 @@
     <!-- bootstrap link ends here -->
     <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
 </head>
-<body class="p-0 ">
+<body class="p-0">
     <section class="">
         <div class="container-fluid">
-            <div class="row d-flex vh-100">
+            <div class="row vh-100">
                 <div class="col-sm-12 col-md-2 py-3 d-flex flex-column gap-5 bg-primary ">
                     <div class="row">
                         <div class="col-md-12 text-center p-0">
@@ -36,22 +36,22 @@
                         <div class="col-md-12 p-0">
                             <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around">
                                 <li class="text-center py-2 ">
-                                    <a href="#" class="text-white text-decoration-none ">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/all_post" class="text-white text-decoration-none ">
                                         All Post
                                     </a>
                                 </li>
                                 <li class=" text-center  py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/add_post" class="text-white text-decoration-none">
                                         Add Post
                                     </a>
                                 </li>
                                 <li class=" text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/categories" class="text-white text-decoration-none">
                                         Catagories
                                     </a>
                                 </li>
                                 <li class=" text-center py-2 bg-white text-primary">
-                                    <a href="#" class=" text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/comments" class=" text-decoration-none">
                                         Comments
                                     </a>
                                 </li>
@@ -59,7 +59,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row mt-md-auto">
+                    <div class="row mt-auto">
                         <div class="col-md-12 text-center">
                             <button class="btn py-md-2 px-md-5 btn bg-white text-primary">
                                Logout                         
@@ -69,9 +69,9 @@
                 </div>
                 <div class="col-sm-12 col-md-10 pt-3 p-start-2">
                 
-                    <div class="row">
+                    <div class="row py-3">
                         <div class="col-md-12 text-center">
-                            <p class="display-5 text-primary">Comments</p>
+                            <p class="h1 text-primary">Comments</p>
                         </div>
                     </div>
                     <div class="row border-top border-primary">

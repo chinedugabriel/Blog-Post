@@ -12,11 +12,11 @@
     <!-- bootstrap link ends here -->
     <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
 </head>
-<body class="bg-primary p-0 ">
-    <section class="vh-sm-100 ">
-        <div class="container-md mt-sm-5">
-            <div class="row border">
-                <div class="col-sm-2 border py-3 d-flex flex-column gap-4">
+<body class="p-0 ">
+    <section class="">
+        <div class="container-fluid">
+            <div class="row vh-100">
+                <div class="col-sm-12 col-md-2 py-3 d-flex flex-column gap-5 bg-primary">
                     <div class="row">
                         <div class="col-md-12 text-center p-0">
                             <img src="../src/img/blog_logo.png" alt="logo" class="img-fluid w-50 w-md-75 border-bottom img-logo ">
@@ -26,22 +26,22 @@
                         <div class="col-md-12 p-0">
                             <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around">
                                 <li class="text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/all_post" class="text-white text-decoration-none">
                                         All Post
                                     </a>
                                 </li>
                                 <li class=" text-center bg-white text-primary py-2">
-                                    <a href="#" class=" text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/add_post" class=" text-decoration-none">
                                         Add Post
                                     </a>
                                 </li>
                                 <li class=" text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/categories" class="text-white text-decoration-none">
                                         Catagories
                                     </a>
                                 </li>
                                 <li class=" text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/comments" class="text-white text-decoration-none">
                                         Comments
                                     </a>
                                 </li>
@@ -50,7 +50,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-auto">
                         <div class="col-md-12 text-center">
                             <button class="btn py-md-2 px-md-5 btn bg-white text-primary">
                                Logout                         
@@ -58,17 +58,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-9 ">
-                    <form action="" method="" class="d-grid gap-1 p-3 pt-0 h-100">
-                        <div class="row">
+                <div class="col-sm-12 col-md-10 ">
+                    <form action="" method="" class="d-grid gap-1 p-3 pt-0 h-75">
+                        <div class="row py-3">
                             <div class="col-md-12 text-center">
-                                <p class="display-5 text-white">Post Content</p>
+                                <p class="h1 text-primary">Post Content</p>
                             </div>
                         </div>
-                        <div class="row border">
+                        <div class="row border border shadow">
                             <div class="col-md-8 d-grid gap-3 py-3 px-5 border-end">
                                 <div class="row">
-                                    <p class="display-5 text-white m-0">
+                                    <p class="display-5 text-primary m-0">
                                         Title
                                     </p>
                                     <input type="text" class="form-control rounded rounded-0" name="" id="" placeholder="Title">
@@ -78,8 +78,20 @@
                                 </div>
                             </div>
                             <div class="col-md-4 d-flex flex-column gap-3 gap-md-0 justify-content-between py-3 px-5 ">
+                            <div class="row d-flex flex-row justify-content-between">
+                                    <div class="col-sm-5 my-1 px-0 my-sm-0">
+                                        <select class="form-select" name="post_status">
+                                            <option class="" value="draft"> Draft</option>
+                                            <option class="text-success" value="publish"> Publish</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-5  my-1 px-0 my-sm-0">
+                                        <input type="submit" class="form-control px-3 btn btn-primary" name="submit" value="Submit">
+                                    </div>
+                                </div>
+                                
                                 <div class="row">
-                                    <p class="text-white p-0">Add an Image to Post</p>
+                                    <p class="text-primary p-0">Add an Image to Post</p>
                                     <input type="file" class="form-control" name="upload-img" id="upload-img">
                                 </div>
                                 <div class="row ">
@@ -90,14 +102,14 @@
                                 </div>
                                 <div class="row ">
                                     <div class="col-sm-12 p-0">
-                                        <p class="text-white">
+                                        <p class="text-primary">
                                             Add to slider : &nbsp;
-                                            <input type="checkbox" name="slider" id="">
+                                            <input type="checkbox" name="slider" id="" class="form-check-input">
                                         </p>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <p class="text-white p-0">
+                                    <p class="text-primary p-0">
                                         Input Categories:
                                     </p>
                                     <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="Categories" id="categories">
@@ -106,14 +118,7 @@
                                     To save the post to draft which the user can use later you can use the same database table but have a column in the table as display status where the value would either be publish or draftBut remember when we want to display from the table we would use the row Ie(Display status) to get our data from the database for the index page or Blog page which all site visitors can see
 
                                  -->
-                                <div class="row d-flex flex-row justify-content-between">
-                                    <div class="col-sm-5 my-1 px-0 my-sm-0">
-                                        <input type="submit" class="form-control px-3" name="submit" value="Draft">
-                                    </div>
-                                    <div class="col-sm-5  my-1 px-0 my-sm-0">
-                                        <input type="submit" class="form-control px-3" name="submit" value="Submit">
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </form>

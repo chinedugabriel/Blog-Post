@@ -36,22 +36,22 @@
                         <div class="col-md-12 p-0">
                             <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around">
                                 <li class="text-center py-2 border bg-white text-primary">
-                                    <a href="#" class=" text-decoration-none ">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/all_post" class=" text-decoration-none ">
                                         All Post
                                     </a>
                                 </li>
                                 <li class=" text-center  py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/add_post" class="text-white text-decoration-none">
                                         Add Post
                                     </a>
                                 </li>
                                 <li class=" text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/categories" class="text-white text-decoration-none">
                                         Catagories
                                     </a>
                                 </li>
                                 <li class=" text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/pages/comments" class="text-white text-decoration-none">
                                         Comments
                                     </a>
                                 </li>
@@ -70,9 +70,9 @@
                 </div>
                 <div class="col-sm-12 col-md-10  pt-3 p-start-2">
                 
-                    <div class="row">
+                    <div class="row py-3">
                         <div class="col-md-12 text-center">
-                            <p class="display-5 text-primary">Post</p>
+                            <p class="h1 text-primary">Post</p>
                         </div>
                     </div>
                     <div class="row border bg-white">
