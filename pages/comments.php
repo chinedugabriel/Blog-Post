@@ -25,7 +25,7 @@
 <body class="p-0 ">
     <section class="">
         <div class="container-fluid">
-            <div class="row d-flex gap-sm-5 vh-100">
+            <div class="row d-flex vh-100">
                 <div class="col-sm-12 col-md-2 py-3 d-flex flex-column gap-5 bg-primary ">
                     <div class="row">
                         <div class="col-md-12 text-center p-0">
@@ -67,14 +67,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-9 pt-3 p-start-2">
+                <div class="col-sm-12 col-md-10 pt-3 p-start-2">
                 
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <p class="display-5 text-primary">Comments</p>
                         </div>
                     </div>
-                    <div class="row border border-primary">
+                    <div class="row border-top border-primary">
                         <div class="col-md-12 py-3">
                             <div class="row">
                                 <div class=" table-responsive">
@@ -86,7 +86,7 @@
                                                 <th>Visitors Name</th>
                                                 <th>Comments</th>
                                                 <th>Status</th>
-                                                <th>slider</th>
+                                                <th>Change Status</th>
                                                 <th>Delete</th>
                                             </tr>
                                         </thead>
