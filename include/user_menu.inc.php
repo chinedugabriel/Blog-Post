@@ -10,15 +10,15 @@
       $menuDynamic;
       if (isset($menuDynamic)){
         echo ' 
-          <a class="navbar-brand  w-50 " href="#">
-              <img src="../src/img/blog_logo" alt="" class="img-fluid w-25 ">
+          <a class="navbar-brand" href="#">
+              <img src="../src/img/logo" alt="" class="img-fluid">
           </a>';
 
       }else{
 
         echo '   
-          <a class="navbar-brand  w-50 " href="#">
-              <img src="./src/img/blog_logo" alt="" class="img-fluid w-25 ">
+          <a class="navbar-brand" href="#">
+              <img src="./src/img/logo" alt="" class="img-fluid  ">
           </a>';
 
       }
