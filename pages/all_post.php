@@ -22,11 +22,11 @@
     <!-- bootstrap link ends here -->
     <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
 </head>
-<body class="bg-primary p-0 ">
-    <section class="vh-sm-100 ">
-        <div class="container-md mt-sm-5">
-            <div class="row border d-flex gap-sm-5 ">
-                <div class="col-sm-2 border py-3 d-flex flex-column gap-4">
+<body class="">
+    <section class="">
+        <div class="container-fluid">
+            <div class="row d-flex vh-100">
+                <div class="col-sm-12 col-md-2 col-lg- py-3 d-flex flex-column gap-5 bg-primary">
                     <div class="row">
                         <div class="col-md-12 text-center p-0">
                             <img src="../src/img/blog_logo.png" alt="logo" class="img-fluid w-50 w-md-75 border-bottom img-logo ">
@@ -60,7 +60,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-auto">
                         <div class="col-md-12 text-center">
                             <button class="btn py-md-2 px-md-5 btn bg-white text-primary">
                                Logout                         
@@ -68,11 +68,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-9  pt-3 p-start-2">
+                <div class="col-sm-12 col-md-10  pt-3 p-start-2">
                 
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <p class="display-5 text-white">Post</p>
+                            <p class="display-5 text-primary">Post</p>
                         </div>
                     </div>
                     <div class="row border bg-white">
@@ -88,7 +88,6 @@
                                                 <th>Categories</th>
                                                 <th>Status</th>
                                                 <th>slider</th>
-                                                <th>Edith</th>
                                                 <th>Delete</th>
                                             </tr>
                                         </thead>
@@ -99,7 +98,10 @@
                                                     12/05/2024
                                                 </td>
                                                 <td>
-                                                    Sports
+                                                    <!-- this link take you to the edith page -->
+                                                    <a href= "">
+                                                        Ai would change Sports in 2024
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     Sports, Entertainment
@@ -115,15 +117,7 @@
                                                         </svg>
                                                     </a>
                                                 </td>
-                                                <td>
-                                                    <!-- Edith icon -->
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                                        </svg>
-                                                    </a>
-                                                </td>
+
                                                 <td>
                                                     <!-- Delete icon -->
                                                     <a href="#">
@@ -142,7 +136,10 @@
                                                     12/05/2024
                                                 </td>
                                                 <td>
-                                                    Politics
+                                                    <!-- this link would be used to edith each post -->
+                                                    <a href= "">
+                                                        Politics will change Nigeria in 2024
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     Sports, Entertainment
@@ -158,14 +155,7 @@
                                                         </svg>
                                                     </a>
                                                 </td>
-                                                <td>
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                                        </svg>
-                                                    </a>
-                                                </td>
+
                                                 <td>
                                                     <a href="#">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3 text-danger " viewBox="0 0 16 16">
@@ -183,7 +173,10 @@
                                                     12/05/2024
                                                 </td>
                                                 <td>
-                                                    Politics
+                                                    <!-- this link take you to the edith page -->
+                                                    <a href= "">
+                                                        Ai would change Sports in 2024
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     Sports, Entertainment
@@ -199,15 +192,7 @@
                                                         </svg>
                                                     </a>
                                                 </td>
-                                                <td>
-                                                    <!-- Edith icon -->
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square " viewBox="0 0 16 16">
-                                                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                                        </svg>
-                                                    </a>
-                                                </td>
+
                                                 <td>
                                                     <!-- Delete icon -->
                                                     <a href="#">
@@ -226,7 +211,10 @@
                                                     12/05/2024
                                                 </td>
                                                 <td>
-                                                    Politics
+                                                  <!-- this link take you to the edith page -->
+                                                    <a href= "">
+                                                        Ai would change Sports in 2024
+                                                    </a>
                                                 </td>
                                                 <td>
                                                     Sports, Entertainment
@@ -242,15 +230,7 @@
                                                         </svg>
                                                     </a>
                                                 </td>
-                                                <td>
-                                                    <!-- Edith icon -->
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                                            <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-                                                            <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
-                                                        </svg>
-                                                    </a>
-                                                </td>
+
                                                 <td>
                                                     <!-- Delete icon -->
                                                     <a href="#">
