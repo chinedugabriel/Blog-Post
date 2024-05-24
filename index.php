@@ -11,38 +11,45 @@
 </head>
 <body class="bg-primary">
     <section class="vh-100 d-flex justify-content-center align-items-center">
-        <div class="container-fluid p-3 border h-md-75 ">
+        <div class="container-fluid px-3 border h-md-75 ">
             <div class="row h-100">
-                <div class="col-md-2 h-md-100 border d-flex flex-column justify-content-around align-items-center p-0 px-1">
-                    <div class="row w-75">
+                <div class="col-md-2 h-md-100 border-end d-flex flex-column justify-content-around align-items-center p-0 px-1">
+                    <div class="row w-75 border-bottom">
                         <div class="col-md-12 text-center">
                             <img src="./src/img/logo.png" alt="logo" class="img-fluid">
                         </div>
                     </div>
-                    <div class="row w-100 p-0 h-25">
+                    <div class="row w-100 p-0 h-50">
                         <div class="col-md-12 p-0 ">
                             <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around ">
-                                <li class="text-center border ">
+                                <li class="text-center py-2">
                                     <a href="#" class="text-white text-decoration-none">
                                         All Post
                                     </a>
                                 </li>
-                                <li class=" text-center border border-danger">
+                                <li class=" text-center border  py-2">
                                     <a href="#" class="text-white text-decoration-none">
                                         Add Post
                                     </a>
                                 </li>
-                                <!-- <li class="list-group-item">
-                                    <a href="#" class="text-white">
-                                        
+                                <li class=" text-center py-2">
+                                    <a href="#" class="text-white text-decoration-none">
+                                        Catagories
                                     </a>
-                                </li> -->
+                                </li>
+                                <li class=" text-center py-2">
+                                    <a href="#" class="text-white text-decoration-none">
+                                        Add Catagories
+                                    </a>
+                                </li>
+
+
                             </ul>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="fom-control px-3 btn border btn-border-white text-white rounded">
+                            <button class="fom-control py-2 px-4 btn border btn-border-white text-white">
                                Logout                         
                             </button>
                         </div>
@@ -56,7 +63,7 @@
                             </div>
                         </div>
                         <div class="row border">
-                            <div class="col-md-8 d-grid gap-3 py-3 px-5 border border-top-0 border-start-0 border-bottom-0 border-end-1">
+                            <div class="col-md-8 d-grid gap-3 py-3 px-5 border-end">
                                 <div class="row">
                                     <p class="display-5 text-white m-0">
                                         Title
