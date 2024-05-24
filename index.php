@@ -10,9 +10,44 @@
 </head>
 <body class="bg-primary">
     <section class="vh-100 d-flex justify-content-center align-items-center">
-        <div class="container p-3 border h-75 d-flex flex-column">
+        <div class="container-fluid p-3 border h-75 ">
             <div class="row h-100">
-                <div class="col-md-12">
+                <div class="col-md-2 h-100 border d-flex flex-column justify-content-around align-items-center">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="" alt="logo" class="logo">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="list-unstyled">
+                                <li class="">
+                                    <a href="#" class="text-white">
+                                        All Post
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="text-white">
+                                        Add Post
+                                    </a>
+                                </li>
+                                <!-- <li class="list-group-item">
+                                    <a href="#" class="text-white">
+                                        
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="fom-control px-3 btn border btn-border-white text-white rounded">
+                               Logout                         
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 offset-md-1">
                     <form action="" method="" class="d-grid gap-1 p-3 h-100">
                         <div class="row">
                             <div class="col-md-12 text-center">
