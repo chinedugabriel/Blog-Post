@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post</title>
-    <link rel="stylesheet" href="style.css">
     <!-- bootstrap link start here -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <!-- bootstrap link ends here -->
     <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="bg-primary">
-    <section class="vh-sm-100 d-flex justify-content-center align-items-center">
-        <div class="container-sm-fluid px-3 border h-md-75 ">
+    <section class="vh-100 d-flex justify-content-center align-items-center">
+        <div class="container-fluid px-3 border h-md-75 ">
             <div class="row h-100">
-                <div class="col-md-2 h-auto h-md-100 border-end d-flex flex-column justify-content-around align-items-center p-0 px-1">
-                    <div class="row">
-                        <div class="col-9 col-md-4 offset-md-4 p-0 border">
-                            <img src="./src/img/logo.png" alt="logo" class="img-fluid border-bottom img-logo w-25 w-sm-50 w-md-auto">
+                <div class="col-md-2 h-md-100 border-end d-flex flex-column justify-content-around align-items-center p-0 px-1">
+                    <div class="row w-75 border-bottom">
+                        <div class="col-md-12 text-center">
+                            <img src="./src/img/logo.png" alt="logo" class="img-fluid">
                         </div>
                     </div>
-                    <div class="row w-md-100 p-0 h-md-50">
+                    <div class="row w-100 p-0 h-50">
                         <div class="col-md-12 p-0 ">
                             <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around ">
                                 <li class="text-center py-2">
@@ -50,7 +49,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <button class="fom-control py-2 px-5 btn bg-white text-primary">
+                            <button class="fom-control py-2 px-4 btn border btn-border-white text-white">
                                Logout                         
                             </button>
                         </div>
