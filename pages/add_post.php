@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post</title>
-    <!-- bootstrap link start here -->
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap link start here 
+    * Bootstrap v5.3.0-alpha3 
+    -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <!-- bootstrap link ends here -->
     <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
 </head>
-<body class="bg-primary">
-    <section class="vh-100 d-flex justify-content-center align-items-center">
-        <div class="container-fluid px-3 border h-md-75 ">
-            <div class="row h-100">
-                <div class="col-md-2 h-md-100 border-end d-flex flex-column justify-content-around align-items-center p-0 px-1">
-                    <div class="row w-75 border-bottom">
-                        <div class="col-md-12 text-center">
-                            <img src="./src/img/logo.png" alt="logo" class="img-fluid">
+<body class="bg-primary p-0 ">
+    <section class="vh-sm-100 ">
+        <div class="container-md mt-sm-5">
+            <div class="row border">
+                <div class="col-sm-2 border py-3 d-flex flex-column gap-4">
+                    <div class="row">
+                        <div class="col-md-12 text-center p-0">
+                            <img src="./src/img/logo.png" alt="logo" class="img-fluid w-50 w-md-75 border-bottom img-logo ">
                         </div>
                     </div>
-                    <div class="row w-100 p-0 h-50">
-                        <div class="col-md-12 p-0 ">
-                            <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around ">
+                    <div class="row p-0 h-auto h-md-50">
+                        <div class="col-md-12 p-0">
+                            <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around">
                                 <li class="text-center py-2">
                                     <a href="#" class="text-white text-decoration-none">
                                         All Post
@@ -48,14 +51,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12">
-                            <button class="fom-control py-2 px-4 btn border btn-border-white text-white">
+                        <div class="col-md-12 text-center">
+                            <button class="fom-control py-2 px-5 btn bg-white text-primary">
                                Logout                         
                             </button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9 offset-md-1">
+                <div class="col-sm-9 ">
                     <form action="" method="" class="d-grid gap-1 p-3 pt-0 h-100">
                         <div class="row">
                             <div class="col-md-12 text-center">
