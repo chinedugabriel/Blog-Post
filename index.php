@@ -25,12 +25,12 @@
                     <div class="row p-0 h-auto h-md-50">
                         <div class="col-md-12 p-0">
                             <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around">
-                                <li class="text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                <li class=" border bg-white text-primary text-center py-2">
+                                    <a href="#" class=" text-decoration-none">
                                         All Post
                                     </a>
                                 </li>
-                                <li class=" text-center border  py-2">
+                                <li class=" text-center  py-2">
                                     <a href="#" class="text-white text-decoration-none">
                                         Add Post
                                     </a>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <button class="fom-control py-2 px-5 btn bg-white text-primary">
+                            <button class="btn py-md-2 px-md-5 btn bg-white text-primary">
                                Logout                         
                             </button>
                         </div>

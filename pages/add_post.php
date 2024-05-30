@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <!-- bootstrap link start here 
     * Bootstrap v5.3.0-alpha3 
     -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <!-- bootstrap link ends here -->
-    <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
 </head>
 <body class="bg-primary p-0 ">
     <section class="vh-sm-100 ">
@@ -19,7 +19,7 @@
                 <div class="col-sm-2 border py-3 d-flex flex-column gap-4">
                     <div class="row">
                         <div class="col-md-12 text-center p-0">
-                            <img src="./src/img/logo.png" alt="logo" class="img-fluid w-50 w-md-75 border-bottom img-logo ">
+                            <img src="../src/img/logo.png" alt="logo" class="img-fluid w-50 w-md-75 border-bottom img-logo ">
                         </div>
                     </div>
                     <div class="row p-0 h-auto h-md-50">
@@ -30,8 +30,8 @@
                                         All Post
                                     </a>
                                 </li>
-                                <li class=" text-center border  py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                <li class=" text-center bg-white text-primary py-2">
+                                    <a href="#" class=" text-decoration-none">
                                         Add Post
                                     </a>
                                 </li>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <button class="fom-control py-2 px-5 btn bg-white text-primary">
+                            <button class="btn py-md-2 px-md-5 btn bg-white text-primary">
                                Logout                         
                             </button>
                         </div>
@@ -84,7 +84,7 @@
                                 </div>
                                 <div class="row ">
                                     <!-- img should display when the user uploads an image -->
-                                    <img src="./src/img/259609483_10159616963876670_8003904271829121769_n.jpg" class="img-fluid w-50 m-0 p-0 rounded shadow" id="uploaded-img">
+                                    <img src="../src/img/259609483_10159616963876670_8003904271829121769_n.jpg" class="img-fluid w-50 m-0 p-0 rounded shadow" id="uploaded-img">
                                 </div>
                                 <div class="row">
                                     <p class="text-white p-0">

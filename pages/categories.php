@@ -30,13 +30,13 @@
                                         All Post
                                     </a>
                                 </li>
-                                <li class=" text-center border  py-2">
+                                <li class=" text-center  py-2">
                                     <a href="#" class="text-white text-decoration-none">
                                         Add Post
                                     </a>
                                 </li>
-                                <li class=" text-center py-2">
-                                    <a href="#" class="text-white text-decoration-none">
+                                <li class=" text-center border bg-white text-primary py-2">
+                                    <a href="#" class="text-primary text-decoration-none">
                                         Catagories
                                     </a>
                                 </li>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <button class="fom-control py-2 px-5 btn bg-white text-primary">
+                            <button class="btn py-md-2 px-md-5 btn bg-white text-primary">
                                Logout                         
                             </button>
                         </div>
@@ -62,7 +62,7 @@
                 <!-- <form action="" method="" class="d-grid gap-1 p-3 pt-0 h-100"> -->
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <p class="display-5 text-white">Post Content</p>
+                                <p class="display-5 text-white">Categories</p>
                             </div>
                         </div>
                         <div class="row border">
