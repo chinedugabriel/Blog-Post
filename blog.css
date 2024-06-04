@@ -1,0 +1,11 @@
+Body,*{
+    padding:0px;
+    margin:0px;
+    /* background-color: rebeccapurple; */
+}
+
+#more-news{
+    position: fixed !important;
+    right: 10%;
+    /* top: 40%; */
+}
