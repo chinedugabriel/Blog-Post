@@ -83,8 +83,18 @@
                                     <input type="file" class="form-control" name="upload-img" id="upload-img">
                                 </div>
                                 <div class="row ">
-                                    <!-- img should display when the user uploads an image -->
-                                    <img src="../src/img/259609483_10159616963876670_8003904271829121769_n.jpg" class="img-fluid w-50 m-0 p-0 rounded shadow" id="uploaded-img">
+                                    <div class="col-sm-12 p-0">
+                                        <!-- img should display when the user uploads an image -->
+                                        <img src="../src/img/259609483_10159616963876670_8003904271829121769_n.jpg" class="img-fluid w-50 m-0 p-0 rounded shadow" id="uploaded-img">
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-sm-12 p-0">
+                                        <p class="text-white">
+                                            Add to slider : &nbsp;
+                                            <input type="checkbox" name="slider" id="">
+                                        </p>
+                                    </div>
                                 </div>
                                 <div class="row">
                                     <p class="text-white p-0">
