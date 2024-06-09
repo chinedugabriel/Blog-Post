@@ -172,37 +172,7 @@
 
                 <div class="col-md-2 offset-md-1 text-primary d-none d-lg-flex flex-column position-relative " id="more-news">
                     <!-- category goes here -->
-                    <div class="row border-bottom border-primary border-2 mb-2">
-                        <div class="col-sm-12 p-0">
-                            <p class="h4">More News</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <ul class="list-unstyled">
-                                <li class="text-style-none">
-                                    <a href="#" class="text-decoration-none">
-                                        Politics
-                                    </a>
-                                </li>
-                                <li class="text-style-none">
-                                    <a href="#" class="text-decoration-none">
-                                        Sports
-                                    </a>
-                                </li>
-                                <li class="text-style-none">
-                                    <a href="#" class="text-decoration-none">
-                                        Entertainment
-                                    </a>
-                                </li>
-                                <li class="text-style-none">
-                                    <a href="#" class="text-decoration-none">
-                                        Travel
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    <?php include_once "./include/category_menu.inc.php" ; ?>
 
                 </div>
             </div>
