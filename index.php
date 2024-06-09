@@ -8,7 +8,7 @@
     <!-- bootstrap link start here 
     * Bootstrap v5.3.0-alpha3 
     -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <!-- bootstrap link ends here -->
     <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
 </head>
@@ -181,6 +181,6 @@
     </section>
 
 
-<script src="bootstrap/js/bootstrap.js"></script>
+<script src="./bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
