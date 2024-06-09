@@ -11,6 +11,10 @@ Body,*{
 }
 
 /* slider caption wrapper */
-.carousel-caption{
+/* .carousel-caption{
     background-color: rgba(0, 0, 0, 0.349) !important;
+} */
+
+.overlay{
+    border-image: linear-gradient(#0000004d,#0000004d) fill 1  !important;
 }
