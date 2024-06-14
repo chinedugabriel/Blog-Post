@@ -11,14 +11,14 @@
       if (isset($menuDynamic)){
         echo ' 
           <a class="navbar-brand  w-50 " href="#">
-              <img src="../src/img/logo.png" alt="" class="img-fluid w-25 ">
+              <img src="../src/img/blog_logo" alt="" class="img-fluid w-25 ">
           </a>';
 
       }else{
 
         echo '   
           <a class="navbar-brand  w-50 " href="#">
-              <img src="./src/img/logo.png" alt="" class="img-fluid w-25 ">
+              <img src="./src/img/blog_logo" alt="" class="img-fluid w-25 ">
           </a>';
 
       }
