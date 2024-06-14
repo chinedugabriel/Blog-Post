@@ -5,8 +5,8 @@ Body,*{
 }
 /* More news on home page */
 #more-news{
-    position: fixed !important;
-    right: 10%;
+    /* position: fixed !important;
+    right: 10%; */
     /* top: 40%; */
 }
 
