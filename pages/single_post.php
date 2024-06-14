@@ -15,7 +15,8 @@
 <body class=" ">
  <?php
 //  This veriable is used to provide the right menu which would display the correct logo
-    $menuDynamic = "single_post";
+
+    $menuDynamic = "true";
     include_once "../include/user_menu.inc.php";
     
  ?>

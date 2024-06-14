@@ -3,8 +3,8 @@
 
 // This statement is used to fix an error of the logo due to file path naming 
 
-$menuDynamic = 'generAL';
-if ($menuDynamic == "single_post"){
+$menuDynamic;
+if (isset($menuDynamic)){
   echo ' 
   <nav class="navbar navbar-expand-md bg-primary ">
     <div class="container">
