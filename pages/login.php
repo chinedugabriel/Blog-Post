@@ -17,19 +17,19 @@
 <section class="sec1-login bg-primary ">
     <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
         <div class="row h-100 ">
-            <div class="d-none d-lg-flex col-sm-8 d-flex justify-content-center align-items-center bg-white">
+            <div class=" col-sm-8 d-none d-lg-flex justify-content-center align-items-center bg-white">
                 <img src="../src/img/bg_login.png" alt="a vector image of content creators " style="width:70%">
             </div>
-            <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center gap-4 px-sm-5 ">
-                <div class="row">
+            <div class="col-lg-4 d-flex flex-column justify-content-center align-items-center gap-4 px-sm-5 position-relative">
+                <div class="row position-absolute" style="top:30px; width: 95%;">
                     <div class="col-sm-12 text-center">
-                        <img src="../src/img/blog_logo.png" alt="" class="img-fluid" style="width:70%">
+                        <img src="../src/img/blog_logo.png" alt="" class="img-fluid " style="width:50%; ">
                     </div>
                 </div>
 
                 <div class="row py-sm-5 px-sm-3 text-white w-100 d-flex justify-content-center align-items-center">
                     <div class="col-sm-12">
-                        <form action="" method="" class=" d-flex flex-column gap-3">
+                        <form action="" method="" class=" d-flex flex-column gap-4">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <p class="h3">Login</p>
