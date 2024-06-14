@@ -29,7 +29,7 @@
                 <div class="col-sm-2 border py-3 d-flex flex-column gap-4">
                     <div class="row">
                         <div class="col-md-12 text-center p-0">
-                            <img src="../src/img/logo.png" alt="logo" class="img-fluid w-50 w-md-75 border-bottom img-logo ">
+                            <img src="../src/img/blog_logo.png" alt="logo" class="img-fluid w-50 w-md-75 border-bottom img-logo ">
                         </div>
                     </div>
                     <div class="row p-0 h-auto h-md-50">
