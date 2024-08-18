@@ -33,7 +33,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <p class="h3">Login</p>
-                                    <p>Welcome back are you ready to contribute to the society</p>
+                                    <p>Welcome back, are you ready to contribute to the society</p>
                                 </div>
                             </div>
                             <div class="row">
