@@ -42,7 +42,7 @@
                                 </li>
                                 <li class=" text-center py-2">
                                     <a href="#" class="text-white text-decoration-none">
-                                        Add Catagories
+                                        Comments
                                     </a>
                                 </li>
 
