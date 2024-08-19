@@ -84,7 +84,7 @@
                                             <tr class="text-center">
                                                 <th>id</th>
                                                 <th>Date</th>
-                                                <th>Name</th>
+                                                <th>Title</th>
                                                 <th>Categories</th>
                                                 <th>Status</th>
                                                 <th>slider</th>
