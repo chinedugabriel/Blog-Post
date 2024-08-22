@@ -79,7 +79,7 @@
                             <p class="h1 text-primary">Post</p>
                         </div>
                     </div>
-                    <div class="row border bg-white">
+                    <div class="row border-top border-primary bg-white">
                         <div class="col-md-12 py-3">
                             <div class="row">
                                 <div class=" table-responsive">
