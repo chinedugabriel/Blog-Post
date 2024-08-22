@@ -83,7 +83,7 @@
                         <div class="col-md-12 py-3">
                             <div class="row">
                                 <div class=" table-responsive">
-                                    <table class="table table-primary table-striped">
+                                    <table class="table table-primary table-hover">
                                         <thead >
                                             <tr class="text-center">
                                                 <th>id</th>
