@@ -107,7 +107,7 @@
                                 <div class="row ">
                                     <div class="col-sm-12 p-0">
                                         <p class="text-primary">
-                                            Add to slider : &nbsp;
+                                            Add Post to slider : &nbsp;
                                             <input type="checkbox" name="slider" id="" class="form-check-input">
                                         </p>
                                     </div>
