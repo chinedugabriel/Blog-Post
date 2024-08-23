@@ -73,7 +73,7 @@
                             <div class="col-md-7 offset-md-1 py-3 ">
                                 <div class="row">
                                     <div class="col-md-12 ">
-                                        <table class="table table-primary table-striped">
+                                        <table class="table table-light table-hover">
                                             <thead >
                                                 <tr class="text-center">
                                                     <th>id</th>
