@@ -26,22 +26,22 @@
                         <div class="col-md-12 p-0">
                             <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around">
                                 <li class="text-center py-2">
-                                    <a href="http://localhost/php_projects/Blog-Post/pages/all_post" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/views/all_post" class="text-white text-decoration-none">
                                         All Post
                                     </a>
                                 </li>
                                 <li class=" text-center text-white py-2">
-                                    <a href="http://localhost/php_projects/Blog-Post/pages/add_post" class=" text-decoration-none text-white">
+                                    <a href="http://localhost/php_projects/Blog-Post/views/add_post" class=" text-decoration-none text-white">
                                         Add Post
                                     </a>
                                 </li>
                                 <li class=" text-center py-2">
-                                    <a href="http://localhost/php_projects/Blog-Post/pages/categories" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/views/categories" class="text-white text-decoration-none">
                                         Catagories
                                     </a>
                                 </li>
                                 <li class=" text-center py-2">
-                                    <a href="http://localhost/php_projects/Blog-Post/pages/comments" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/views/comments" class="text-white text-decoration-none">
                                         Comments
                                     </a>
                                 </li>

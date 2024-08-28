@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post</title>
+    <title>Comments</title>
     <link rel="stylesheet" href="../style.css">
     <!-- bootstrap link start here 
     * Bootstrap v5.3.0-alpha3 
@@ -22,11 +22,11 @@
     <!-- bootstrap link ends here -->
     <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
 </head>
-<body class="">
+<body class="p-0">
     <section class="">
         <div class="container-fluid">
-            <div class="row d-flex vh-100">
-                <div class="col-sm-12 col-md-2 col-lg- py-3 d-flex flex-column gap-5 bg-primary">
+            <div class="row vh-100">
+                <div class="col-sm-12 col-md-2 py-3 d-flex flex-column gap-5 bg-primary ">
                     <div class="row">
                         <div class="col-md-12 text-center p-0">
                             <img src="../src/img/blog_logo.png" alt="logo" class="img-fluid w-50 w-md-75 border-bottom img-logo ">
@@ -35,27 +35,26 @@
                     <div class="row p-0 h-auto h-md-50">
                         <div class="col-md-12 p-0">
                             <ul class="list-unstyled h-100 py-3 d-flex flex-column justify-content-around">
-                                <li class="text-center py-2 border bg-white text-primary">
-                                    <a href="http://localhost/php_projects/Blog-Post/pages/all_post" class=" text-decoration-none ">
+                                <li class="text-center py-2 ">
+                                    <a href="http://localhost/php_projects/Blog-Post/views/all_post" class="text-white text-decoration-none ">
                                         All Post
                                     </a>
                                 </li>
                                 <li class=" text-center  py-2">
-                                    <a href="http://localhost/php_projects/Blog-Post/pages/add_post" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/views/add_post" class="text-white text-decoration-none">
                                         Add Post
                                     </a>
                                 </li>
                                 <li class=" text-center py-2">
-                                    <a href="http://localhost/php_projects/Blog-Post/pages/categories" class="text-white text-decoration-none">
+                                    <a href="http://localhost/php_projects/Blog-Post/views/categories" class="text-white text-decoration-none">
                                         Catagories
                                     </a>
                                 </li>
-                                <li class=" text-center py-2">
-                                    <a href="http://localhost/php_projects/Blog-Post/pages/comments" class="text-white text-decoration-none">
+                                <li class=" text-center py-2 bg-white text-primary">
+                                    <a href="http://localhost/php_projects/Blog-Post/views/comments" class=" text-decoration-none">
                                         Comments
                                     </a>
                                 </li>
-
 
                             </ul>
                         </div>
@@ -72,26 +71,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-10  pt-3 p-start-2">
+                <div class="col-sm-12 col-md-10 pt-3 p-start-2">
                 
                     <div class="row py-3">
                         <div class="col-md-12 text-center">
-                            <p class="h1 text-primary">Post</p>
+                            <p class="h1 text-primary">Comments</p>
                         </div>
                     </div>
-                    <div class="row border-top border-primary bg-white">
+                    <div class="row border-top border-primary">
                         <div class="col-md-12 py-3">
                             <div class="row">
                                 <div class=" table-responsive">
-                                    <table class="table table-light table-hover">
+                                    <table class="table table-light  table-hover">
                                         <thead >
                                             <tr class="text-center">
                                                 <th>id</th>
                                                 <th>Date</th>
-                                                <th>Title</th>
-                                                <th>Categories</th>
+                                                <th>Visitors Name</th>
+                                                <th>Comments</th>
+                                                <th>Reply</th>
                                                 <th>Status</th>
-                                                <th>slider</th>
+                                                <th>Change Status</th>
                                                 <th>Delete</th>
                                             </tr>
                                         </thead>
@@ -102,16 +102,16 @@
                                                     12/05/2024
                                                 </td>
                                                 <td>
-                                                    <!-- this link take you to the edith page -->
-                                                    <a href= "">
-                                                        Ai would change Sports in 2024
-                                                    </a>
+                                                    Sports
                                                 </td>
                                                 <td>
                                                     Sports, Entertainment
                                                 </td>
                                                 <td>
-                                                    Published
+                                                    Sports, Entertainment
+                                                </td>
+                                                <td>
+                                                    Approved
                                                 </td>
                                                 <td>
                                                     <!-- confirmation icon for slider -->
@@ -121,7 +121,6 @@
                                                         </svg>
                                                     </a>
                                                 </td>
-
                                                 <td>
                                                     <!-- Delete icon -->
                                                     <a href="#">
@@ -140,16 +139,16 @@
                                                     12/05/2024
                                                 </td>
                                                 <td>
-                                                    <!-- this link would be used to edith each post -->
-                                                    <a href= "">
-                                                        Politics will change Nigeria in 2024
-                                                    </a>
+                                                    Politics
                                                 </td>
                                                 <td>
                                                     Sports, Entertainment
                                                 </td>
                                                 <td>
-                                                    Published
+                                                    Sports, Entertainment
+                                                </td>
+                                                <td>
+                                                    Approved
                                                 </td>
                                                 <td>
                                                     <!-- confirmation icon for slider -->
@@ -159,7 +158,7 @@
                                                         </svg>
                                                     </a>
                                                 </td>
-
+                                                    <!-- Delete icon -->
                                                 <td>
                                                     <a href="#">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3 text-danger " viewBox="0 0 16 16">
@@ -177,16 +176,16 @@
                                                     12/05/2024
                                                 </td>
                                                 <td>
-                                                    <!-- this link take you to the edith page -->
-                                                    <a href= "">
-                                                        Ai would change Sports in 2024
-                                                    </a>
+                                                    Politics
                                                 </td>
                                                 <td>
                                                     Sports, Entertainment
                                                 </td>
                                                 <td>
-                                                    Published
+                                                    Sports, Entertainment
+                                                </td>
+                                                <td>
+                                                    Pendding
                                                 </td>
                                                 <td>
                                                     <!-- confirmation icon for slider -->
@@ -215,16 +214,16 @@
                                                     12/05/2024
                                                 </td>
                                                 <td>
-                                                  <!-- this link take you to the edith page -->
-                                                    <a href= "">
-                                                        Ai would change Sports in 2024
-                                                    </a>
+                                                    Politics
                                                 </td>
                                                 <td>
                                                     Sports, Entertainment
                                                 </td>
                                                 <td>
-                                                    Published
+                                                    Sports, Entertainment
+                                                </td>
+                                                <td>
+                                                    Pendding
                                                 </td>
                                                 <td>
                                                     <!-- confirmation icon for slider -->
@@ -257,6 +256,8 @@
             </div>
         </div>
     </section>
+
+    <!-- section.sec1-comments>.contain -->
 
 
 <script src="bootstrap/js/bootstrap.js"></script>
