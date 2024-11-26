@@ -63,10 +63,10 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-10 ">
-                    <form action="" method="" class="d-grid gap-1 p-3 pt-0 h-75">
+                    <form action="../controller/postController.php" method="post" enctype="multipart/form-data" class="d-grid gap-1 p-3 pt-0 h-75">
                         <div class="row py-3">
                             <div class="col-md-12 text-center">
-                                <p class="h1 text-primary">Edith Post</p>
+                                <p class="h1 text-primary">Edith Post </p>
                             </div>
                         </div>
                         <div class="row border border shadow">
@@ -75,40 +75,40 @@
                                     <p class="display-5 text-primary m-0">
                                         Title
                                     </p>
-                                    <input type="text" class="form-control rounded rounded-0" name="" id="" placeholder="Title">
+                                    <input type="text" class="form-control rounded rounded-0" name="postInputTitle" placeholder="Title" required>
                                 </div>
                                 <div class="row">
-                                    <textarea class="form-control rounded rounded-0" name="" id="" rows="10" cols="" placeholder="Description"></textarea>
+                                    <textarea class="form-control rounded rounded-0" name="postInputDescription" id="" rows="10" cols="" placeholder="Description"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-4 d-flex flex-column gap-3 gap-md-0 justify-content-between py-3 px-5 ">
                             <div class="row d-flex flex-row justify-content-between">
                                     <div class="col-sm-5 my-1 px-0 my-sm-0">
-                                        <select class="form-select" name="post_status" id="post-status-dropdown">
+                                        <select class="form-select" name="postInputStatus" id="post-status-dropdown">
                                             <option class="post-status text-danger" value="draft" onclick="changeDropdownText()"> Draft</option>
                                             <option class="text-success" value="publish" onclick="changeDropdownText()"> Publish</option>
                                         </select>
                                     </div>
-                                    <div class="col-sm-5  my-1 px-0 my-sm-0">
-                                        <input type="submit" class="form-control px-3 btn btn-primary" name="submit" value="Submit">
+                                    <div class="col-sm-5 my-1 px-0 my-sm-0">
+                                        <input type="submit" class="form-control px-3 btn btn-primary" name="edithPost" value="Submit" >
                                     </div>
                                 </div>
                                 
                                 <div class="row">
                                     <p class="text-primary p-0">Add an Image to Post</p>
-                                    <input type="file" class="form-control" name="upload-img" id="upload-img">
+                                    <input type="file" class="form-control" name="imageInput" id="upload-img" >
                                 </div>
                                 <div class="row ">
                                     <div class="col-sm-12 p-0">
-                                        <!-- img should display when the user uploads an image -->
-                                        <img src="../src/img/259609483_10159616963876670_8003904271829121769_n.jpg" class="img-fluid w-50 m-0 p-0 rounded shadow" id="uploaded-img">
+                                        <!-- imgPreview is used to show the image in the file input -->
+                                        <div id="imgPreview" class="border shadow-sm d-flex justify-content-center align-items-center image-preview-box" style=" width: 70%;height: 150px; background-repeat: no-repeat; background-size:contain; background-position: center;"><p id="img-message" class="text-primary  h2">Preview Image</p></div>
                                     </div>
                                 </div>
                                 <div class="row ">
                                     <div class="col-sm-12 p-0">
                                         <p class="text-primary">
-                                            Add to slider : &nbsp;
-                                            <input type="checkbox" name="slider" id="" class="form-check-input">
+                                            Add Post to slider : &nbsp;
+                                            <input type="checkbox" name="postInputSliderStatus"id="slider-checker" class="form-check-input" value="hide" >
                                         </p>
                                     </div>
                                 </div>
@@ -116,7 +116,13 @@
                                     <p class="text-primary p-0">
                                         Input Categories:
                                     </p>
-                                    <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="Categories" id="categories">
+                                    <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="categoriesInput" id="categories" list="category-list">
+                                    <datalist id="category-list" class="">
+                                        <option value="Sports" class="">Sports</option>
+                                        <option value="Entertainment" class="">Entertainment</option>
+                                        <option value="Politics" class="">Politics</option>
+                                        <option value="Nature" class="">Nature</option>
+                                    </datalist>
                                 </div>
                                 <!-- 
                                     To save the post to draft which the user can use later you can use the same database table but have a column in the table as display status where the value would either be publish or draftBut remember when we want to display from the table we would use the row Ie(Display status) to get our data from the database for the index page or Blog page which all site visitors can see
