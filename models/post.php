@@ -95,6 +95,68 @@ class Post extends Database{
 
     }
 
+    public function updatePost($postID){
+
+        // sanitize inputs
+        $this->postTitle = $this->validateInput( $_POST['postInputTitle']);
+
+        $this->postDescription = $this->validateInput($_POST['postInputDescription']);
+
+        // this will upload the image
+        if($_FILES['imageInput']['size'] > 1){
+            $imageUploader = new ImgUploader();
+            $imagePath = $imageUploader->upload($_FILES['imageInput']);
+        }else{
+            $imagePath = 'null';
+        }
+
+        $this->postImg = $imagePath;
+
+        // $postInSlider = 'hide';
+        if (isset($_POST['postInputSliderStatus'])){
+            $postInSlider = $this->validateInput($_POST['postInputSliderStatus']);
+        }else{
+            $postInSlider = 'hide';
+        }
+        $this->postSliderStatus = $postInSlider ;
+
+        $this->postStatus = $this->validateInput($_POST['postInputStatus']);
+
+        $this->postCategories = $this->validateInput($_POST['categoriesInput']);
+
+        $this->adminUserId = 1;
+        // $this->adminUserId = $this->validateInput($this->adminUserId);
+
+        // $this->commentId = $this->validateInput($this->commentId);
+
+
+
+        // create a prepared statement before sending to the database
+
+        $stmt =$this->conn->prepare ("UPDATE $this->table SET post_title = ':postTitle', post_description = ':postDescription', post_image = ':postImg', post_slider_status = ':postSliderStatus', post_status = ':postStatus', post_categories = ':postCategories', admin_user_id = ':adminUserId' WHERE post_id = '$postID'");
+
+        $stmt->bindParam(':postTitle',$this->postTitle);
+        $stmt->bindParam(':postDescription',$this->postDescription);
+        $stmt->bindParam(':postImg',$this->postImg);
+        $stmt->bindParam(':postSliderStatus',$this->postSliderStatus);
+        $stmt->bindParam(':postStatus',$this->postStatus);
+        $stmt->bindParam(':postCategories',$this->postCategories);
+        $stmt->bindParam(':adminUserId',$this->adminUserId);
+
+
+        if($stmt->execute()){
+            echo 'successfully added post to the database';
+
+            // header("Location: http://localhost/php_projects/Blog-Post/views/add_post");
+
+
+        }
+   
+        
+    
+
+    }
+
 
 
 }
