@@ -1,65 +1,111 @@
 <?php
 
-class Post{
-    private $conn;
+require_once "../config/Database.php";
+// include "../config/Database.php";
+require "ImgUploader.php";
+
+// echo "it works";
+
+class Post extends Database{
+    // protected $conn = $this->dbConnect();
 
     private $table = 'post';
 
-    private $postTitle;
-    private $postDescription;
-    private $postImg;
-    private $postSliderStatus;
-    private $postStatus;
-    private $categoriesId;
-    private $adminUserId;
-    private $commentId;
+    public $postTitle;
+    public $postDescription;
+    public $postImg;
+    public $postSliderStatus;
+    public $postStatus;
+    public $postCategories;
+    public $adminUserId;
+    // public $commentId;
 
-    public function __construct($db)
-    {
-        $this->conn = $db;
-    }
+    // public $stmt;
     
     // sanitize inputs
     private function validateInput($data){
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
+        $data = strip_tags($data);
+
         return $data;
     }
 
     // create Post 
-    public function create(){
-        $query = 'INSERT INTO '.$this->table.' (post_title, post_description, post_img, post_slider_status, post_status, categories_id, admin_user_id, comment_id) VALUES( :post_title, :post_description, :post_img, :post_slider_status, :post_status, :categories_id, :admin_user_id, :comment_id) ';
-
-        $stmt = $this->conn->prepare($query);
-
+    public function createPost(){
+        // $result;
         // sanitize inputs
-        $this->postTitle = $this->validateInput($this->postTitle);
-        $this->postDescription = $this->validateInput($this->postDescription);
-        $this->postImg = $this->validateInput($this->postImg);
-        $this->postSliderStatus = $this->validateInput($this->postSliderStatus);
-        $this->postStatus = $this->validateInput($this->postStatus);
-        $this->categoriesId = $this->validateInput($this->categoriesId);
-        $this->adminUserId = $this->validateInput($this->adminUserId);
-        $this->commentId = $this->validateInput($this->commentId);
-    
+        $this->postTitle = $this->validateInput( $_POST['postInputTitle']);
 
-        // Bind Data
-        $stmt->bindParam(':post_title',$this->postTitle);
-        $stmt->bindParam(':post_description',$this->postDescription);
-        $stmt->bindParam(':post_img',$this->postImg);
-        $stmt->bindParam(':post_slider_status',$this->postSliderStatus);
-        $stmt->bindParam(':post_status',$this->postStatus);
-        $stmt->bindParam(':categories_id',$this->categoriesId);
-        $stmt->bindParam(':admin_user_id',$this->adminUserId);
-        $stmt->bindParam(':comment_id',$this->commentId);
+        $this->postDescription = $this->validateInput($_POST['postInputDescription']);
 
-        if($stmt->execute()){
-            return true;
+        // this will upload the image
+        if($_FILES['imageInput']['size'] > 1){
+            $imageUploader = new ImgUploader();
+            $imagePath = $imageUploader->upload($_FILES['imageInput']);
+        }else{
+            $imagePath = 'null';
         }
 
-        printf("Error: %s. \n", $stmt->error);
-        return false;
+        $this->postImg = $imagePath;
+
+        // $postInSlider = 'hide';
+        if (isset($_POST['postInputSliderStatus'])){
+            $postInSlider = $this->validateInput($_POST['postInputSliderStatus']);
+        }else{
+            $postInSlider = 'hide';
+        }
+        $this->postSliderStatus = $postInSlider ;
+
+        $this->postStatus = $this->validateInput($_POST['postInputStatus']);
+
+        $this->postCategories = $this->validateInput($_POST['categoriesInput']);
+
+        $this->adminUserId = 1;
+        // $this->adminUserId = $this->validateInput($this->adminUserId);
+
+        // $this->commentId = $this->validateInput($this->commentId);
+
+
+        // fall back code**
+        // $query = "INSERT INTO $this->table (post_title, post_description, post_image, post_slider_status, post_status, post_categories, admin_user_id) VALUES( '$this->postTitle', '$this->postDescription', '$this->postImg', '$this->postSliderStatus', '$this->postStatus', '$this->postCategories', '$this->adminUserId' ) ";
+
+        // create a prepared statement before sending to the database
+
+        $stmt =$this->conn->prepare ("INSERT INTO $this->table (post_title, post_description, post_image, post_slider_status, post_status, post_categories, admin_user_id) VALUES( :postTitle, :postDescription, :postImg, :postSliderStatus, :postStatus, :postCategories, :adminUserId) ");
+
+        $stmt->bindParam(':postTitle',$this->postTitle);
+        $stmt->bindParam(':postDescription',$this->postDescription);
+        $stmt->bindParam(':postImg',$this->postImg);
+        $stmt->bindParam(':postSliderStatus',$this->postSliderStatus);
+        $stmt->bindParam(':postStatus',$this->postStatus);
+        $stmt->bindParam(':postCategories',$this->postCategories);
+        $stmt->bindParam(':adminUserId',$this->adminUserId);
+
+
+
+
+        // fall back code**
+
+        // if($this->conn->exec($query)){
+        //     echo 'successfully added post to the database';
+
+        //     // header("Location: http://localhost/php_projects/Blog-Post/views/add_post");
+
+        // }
+
+
+        if($stmt->execute()){
+            echo 'successfully added post to the database';
+
+            // header("Location: http://localhost/php_projects/Blog-Post/views/add_post");
+
+
+        }
+   
+        
+    
 
     }
 
