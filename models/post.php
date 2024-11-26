@@ -95,6 +95,17 @@ class Post extends Database{
 
     }
 
+    // read post
+    public function viewPost(){
+        $stmt = $this->conn->prepare("SELECT * FROM post");
+        $stmt->execute();
+
+        foreach($stmt->fetchAll() as $k=>$v){
+            echo print_r($v['post_title']);
+        }
+    }
+
+    // Edith post
     public function updatePost($postID){
 
         // sanitize inputs
@@ -161,7 +172,9 @@ class Post extends Database{
 
 }
 
+$readPost = new Post();
 
+$readPost->viewPost();
 
 
 ?>
