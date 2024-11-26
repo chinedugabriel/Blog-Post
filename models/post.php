@@ -68,8 +68,6 @@ class Post extends Database{
         // $this->commentId = $this->validateInput($this->commentId);
 
 
-        // fall back code**
-        // $query = "INSERT INTO $this->table (post_title, post_description, post_image, post_slider_status, post_status, post_categories, admin_user_id) VALUES( '$this->postTitle', '$this->postDescription', '$this->postImg', '$this->postSliderStatus', '$this->postStatus', '$this->postCategories', '$this->adminUserId' ) ";
 
         // create a prepared statement before sending to the database
 
@@ -82,18 +80,6 @@ class Post extends Database{
         $stmt->bindParam(':postStatus',$this->postStatus);
         $stmt->bindParam(':postCategories',$this->postCategories);
         $stmt->bindParam(':adminUserId',$this->adminUserId);
-
-
-
-
-        // fall back code**
-
-        // if($this->conn->exec($query)){
-        //     echo 'successfully added post to the database';
-
-        //     // header("Location: http://localhost/php_projects/Blog-Post/views/add_post");
-
-        // }
 
 
         if($stmt->execute()){
