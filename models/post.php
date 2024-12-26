@@ -1,6 +1,6 @@
 <?php
 
-require_once "../config/Database.php";
+require "./config/Database.php";
 // include "../config/Database.php";
 require "ImgUploader.php";
 
@@ -8,6 +8,7 @@ require "ImgUploader.php";
 
 class Post extends Database{
     // protected $conn = $this->dbConnect();
+
 
     private $table = 'post';
 
@@ -95,14 +96,23 @@ class Post extends Database{
 
     }
 
+    // read slider post
+    public function sliderPost(){
+        $stmt = $this->conn->query("SELECT * FROM post WHERE post_slider_status = 'show'");
+        // $row = $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        return $result;
+
+    }
     // read post
     public function viewPost(){
-        $stmt = $this->conn->prepare("SELECT * FROM post");
-        $stmt->execute();
+        $stmt = $this->conn->query("SELECT * FROM post");
+        // $row = $stmt->execute();
+        $result = $stmt->fetchAll();
 
-        foreach($stmt->fetchAll() as $k=>$v){
-            echo print_r($v['post_title']);
-        }
+        return $result;
+
     }
 
     // Edith post
@@ -172,9 +182,9 @@ class Post extends Database{
 
 }
 
-$readPost = new Post();
+// $readPost = new Post();
 
-$readPost->viewPost();
+// $readPost->viewPost();
 
 
 ?>

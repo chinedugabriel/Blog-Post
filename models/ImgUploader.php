@@ -49,20 +49,20 @@ class ImgUploader {
         echo "Sorry, your file was not uploaded.";
         // if everything is ok, try to upload file
         } else {
-        if (move_uploaded_file($file["tmp_name"], $target_file)) {
+            if (move_uploaded_file($file["tmp_name"], $target_file)) {
 
-            // here we return the file path 
+                // here we return the file path 
 
-            return $target_file;
+                return $target_file;
 
-        } else {
-            echo "Sorry, there was an error uploading your file.";
-        }
-        }
-
+            } else {
+                echo "Sorry, there was an error uploading your file.";
             }
-            
         }
+
+    }
+            
+}
 
 
 
