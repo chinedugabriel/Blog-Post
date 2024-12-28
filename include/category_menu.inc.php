@@ -1,7 +1,7 @@
 <!-- This would handle the list of categories from the database -->
 
 
-<div class="row mt-2 border-bottom border-primary border-2 mb-2">
+<div class="row border-bottom border-primary border-2 mb-2 ">
     <div class="col-sm-12 p-0">
         <p class="h4">More News</p>
     </div>

@@ -105,9 +105,18 @@ class Post extends Database{
         return $result;
 
     }
+    // read singl post from database ***
+    public function viewSinglePost($id){
+        $stmt = $this->conn->query("SELECT * FROM post WHERE post_id = $id");
+        // $row = $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        return $result;
+
+    }
     // read post
     public function viewPost(){
-        $stmt = $this->conn->query("SELECT * FROM post");
+        $stmt = $this->conn->query("SELECT * FROM post ORDER BY post_date ASC");
         // $row = $stmt->execute();
         $result = $stmt->fetchAll();
 

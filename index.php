@@ -24,13 +24,12 @@
     $slider = $readPost->sliderPost();
  ?>
 
-    <section class="mt-lg-3 pb-3">
-        <div class="container-lg">
-            <div class="row ">
-                <div class="col-lg-9">
-                    <!-- Carousel Starts here -->
-                    <div class="row">
-                        <div class="col-sm-12 p-0">
+    <section>
+        <div class="container-fluid">
+            <div class="col-md-12">
+                <!-- Carousel Starts here -->
+                <div class="row">
+                        <div class="col-sm-12 p-0 ">
                             <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel" > <!-- data-bs-rid
                                 e="carousel" -->
                                 <div class="carousel-indicators">
@@ -38,11 +37,11 @@
                                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                 </div>
-                                <div class="carousel-inner">
+                                <div class="carousel-inner" >
                                     <?php
                                         foreach($slider as $key=>$row):
                                     ?>
-                                    <div class="carousel-item <?php if($key == 0){ echo 'active'; } //this code is assigning active only to the first image from the post ?>  h-75" data-bs-interval="10000">
+                                    <div class="carousel-item <?php if($key == 0){ echo 'active'; } //this code is assigning active only to the first image from the post ?>" data-bs-interval="10000" style="height:75dvh;">
                                         <img src="<?php echo '.'. ltrim($row['post_image'],'.'); ?>" class="d-block w-100 img-fluid " alt="...">
                                         <div class="carousel-caption  d-sm-flex flex-column position-absolute top-50 start-50 translate-middle  align-items-center justify-content-center overlay">
                                             <h5>
@@ -87,12 +86,19 @@
                         </div>
                     </div>
                     <!-- Carousel ends here -->
+            </div>
+        </div>
+    </section>
 
-                    <div class="row my-4  text-primary border-bottom border-primary border-2">
-                        <div class="col-sm-12 p-lg-0">
-                            <p class="h4">Latest News</p>
-                        </div>
-                    </div>
+    <section class="mt-lg-4 pb-3">
+        <div class="container d-flex flex-column gap-5">
+            <div class="row text-primary border-bottom border-primary border-2">
+                <div class="col-sm-12 p-lg-0">
+                    <p class="h4">Latest News</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-9">
                     <div class="row">
                         <div class="col-sm-12">
                             <!-- main news content goes here -->
@@ -101,7 +107,7 @@
                                 foreach($result as $key=>$row):
                             ?>
 
-                            <div class="row">
+                            <div class="row mb-5">
                                 <div class="col-md-12">
                                     <div class="row mb-2">
                                         <div class="col-sm-12 p-lg-0">
@@ -133,8 +139,8 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-12 p-lg-0">
-                                            <img src="<?php echo '.'. ltrim($row['post_image'],'.'); ?>" alt="blog_post_image" class="img-fluid w-75">
+                                        <div class="col-sm-12 p-lg-0 ">
+                                            <img src="<?php echo '.'. ltrim($row['post_image'],'.'); ?>" alt="blog_post_image" class="img-thumbnail w-100 " >
                                            
                                         </div>
                                     </div>
@@ -150,7 +156,7 @@
                                     </div>
                                     <div class="row mb-sm-3">
                                         <div class="col-sm-12 p-lg-0">
-                                            <button class="btn btn-outline-primary rounded-5" >
+                                            <button class="btn btn-primary  rounded-5 " >
                                                 View More
                                             </button>
                                         </div>
@@ -217,9 +223,11 @@
                 </div>
 
 
-                <div class="col-md-2 offset-md-1 text-primary d-none d-lg-flex flex-column position-relative " id="more-news">
+                <div class="col-md-2 offset-md-1 text-primary position-relative" id="more-news">
                     <!-- category goes here -->
-                    <?php include_once "./include/category_menu.inc.php" ; ?>
+                     <div class="position-sticky top-0">
+                         <?php include_once "./include/category_menu.inc.php" ; ?>
+                     </div>
 
                 </div>
             </div>
