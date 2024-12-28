@@ -1,6 +1,6 @@
 <?php
 
-require "./config/Database.php";
+include "C:\wamp64\www\php_projects\Blog-Post\config\Database.php";
 // include "../config/Database.php";
 require "ImgUploader.php";
 
@@ -107,7 +107,7 @@ class Post extends Database{
     }
     // read singl post from database ***
     public function viewSinglePost($id){
-        $stmt = $this->conn->query("SELECT * FROM post WHERE post_id = $id");
+        $stmt = $this->conn->query("SELECT * FROM post WHERE post_id = '$id'");
         // $row = $stmt->execute();
         $result = $stmt->fetchAll();
 

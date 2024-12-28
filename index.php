@@ -54,6 +54,9 @@
                                                     echo $row['post_description'];
                                                  ?>
                                             </p>
+                                            <div class="text-center">
+                                                <a href="http://localhost/php_projects/Blog-Post/views/single_post?id=<?php echo $row['post_id'] ;?>" class="btn btn-primary rounded-5">Read More</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <?php
@@ -156,9 +159,7 @@
                                     </div>
                                     <div class="row mb-sm-3">
                                         <div class="col-sm-12 p-lg-0">
-                                            <button class="btn btn-primary  rounded-5 " >
-                                                View More
-                                            </button>
+                                            <a href="http://localhost/php_projects/Blog-Post/views/single_post?id=<?php echo $row['post_id'] ;?>" class="btn btn-primary rounded-5">Read More</a>
                                         </div>
                                     </div>
                                 </div>
