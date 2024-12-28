@@ -33,9 +33,16 @@
                             <div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel" > <!-- data-bs-rid
                                 e="carousel" -->
                                 <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                     <?php
+                                        foreach($slider as $key=>$row):
+                                    ?>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="<?php echo $key; ?>" class="<?php if($key == 0){ echo 'active'; } //this code is assigning active only to the first image from the post ?>" aria-current="true" aria-label="Slide <?php echo $key+1; ?>"></button>
+
+                                    <?php
+                                        endforeach; 
+                                    ?>
+                                    <!-- <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
                                 </div>
                                 <div class="carousel-inner" >
                                     <?php
