@@ -30,13 +30,15 @@ if(empty($_GET['id'])){
 $singlePost = new Post();
 
 $getPost = $singlePost->viewSinglePost($_GET['id']);
+
+
 }
 
 
     
  ?>
 
-    <section class="mt-lg-3 pb-3">
+    <section class="mt-lg-3 py-3">
         <div class="container-lg">
             <!-- <div class="row my-3">
                 <div class="col-sm-12 px-lg-0">
@@ -54,9 +56,10 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
 
                     <?php 
                         foreach($getPost as $key=>$row):
+                            $category = $row["post_categories"];
                     ?>
 
-                    <div class="row mt-2 mb-4 text-primary border-bottom border-primary border-2">
+                    <div class="row mb-4 text-primary border-bottom border-primary border-2">
                         <div class="col-sm-12 p-lg-0">
                             <p class="h4">
                                 <!-- Title of the post goes here from the database -->
@@ -118,7 +121,7 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12"><button type="submit" class="btn btn-primary">Submit</button></div>
+                                    <div class="col-md-12"><button type="submit" class="btn btn-primary rounded">Submit</button></div>
                                 </div>
                             </form>
                         </div>
@@ -188,20 +191,31 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
                     </div>
 
 
+
                     <div class="row">
                         <div class="col-sm-12 px-lg-0">
                             <div class="row">
+                            <?php
+                                $getPostCategory = $singlePost->relatedPost($category);
+                                
+                                foreach($getPostCategory as $key=>$row):
+                            ?>
                                 <div class="col-md-3">
-                                    <a href="" class="text-decoration-none ">
+                                    <a href="http://localhost/php_projects/Blog-Post/views/single_post?id=<?php echo $row['post_id'] ;?>" class="text-decoration-none ">
                                         <div class="card ">
-                                            <img src="https://img.freepik.com/free-photo/full-shot-underground-hip-hop-musicians_23-2150932925.jpg?t=st=1717539566~exp=1717543166~hmac=a305e5003a38c8b1434c43f4ad32ab8131efabb532355b3427f00633f99e0644&w=1380" class="card-img-top" alt="...">
+                                            <img src="<?php echo $row['post_image']; ?>" class="card-img-top" alt="...">
                                             <div class="card-body">
-                                                <h5 class="card-title">Card title</h5>
+                                                <h5 class="card-title">
+                                                    <!-- Card title -->
+                                                    <?php echo $row['post_title']; ?>
+                                                </h5>
                                             </div>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col-md-3">
+                            <?php endforeach; ?>
+                            UPDATE TABLE post SET post_img ='../uploads/vlcsnap-2024-08-22-15h59m24s080.png' where id =
+                                <!-- <div class="col-md-3">
                                     <a href="#" class="text-decoration-none ">
                                         <div class="card ">
                                             <img src="https://img.freepik.com/free-photo/full-shot-underground-hip-hop-musicians_23-2150932925.jpg?t=st=1717539566~exp=1717543166~hmac=a305e5003a38c8b1434c43f4ad32ab8131efabb532355b3427f00633f99e0644&w=1380" class="card-img-top" alt="...">
@@ -230,7 +244,7 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
                                             </div>
                                         </div>
                                     </a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
