@@ -214,7 +214,6 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
                                     </a>
                                 </div>
                             <?php endforeach; ?>
-                            UPDATE TABLE post SET post_img ='../uploads/vlcsnap-2024-08-22-15h59m24s080.png' where id =
                                 <!-- <div class="col-md-3">
                                     <a href="#" class="text-decoration-none ">
                                         <div class="card ">
