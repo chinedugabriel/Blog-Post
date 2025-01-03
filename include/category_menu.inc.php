@@ -10,13 +10,14 @@
     <div class="col-sm-12">
         <ul class="list-unstyled">
             <li class="text-style-none">
-                <a href="#" class="text-decoration-none">
-                    Politics
+                <!-- added demo links -->
+                <a href="http://localhost/php_projects/Blog-Post/views/view_categories.php?category=sports" class="text-decoration-none">
+                    Sports
                 </a>
             </li>
             <li class="text-style-none">
-                <a href="#" class="text-decoration-none">
-                    Sports
+                <a href="http://localhost/php_projects/Blog-Post/views/view_categories.php?category=Entertainment" class="text-decoration-none">
+                    Politics
                 </a>
             </li>
             <li class="text-style-none">

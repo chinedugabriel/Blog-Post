@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Post</title>
-    <link rel="stylesheet" href="blog.css">
-    <!-- bootstrap link start here 
-    * Bootstrap v5.3.0-alpha3 
-    -->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-    <!-- bootstrap link ends here -->
-    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
-</head>
-<body class=" ">
- <?php
+<?php
 //  This veriable is used to provide the right menu which would display the correct logo
 
     $menuDynamic = "true";
@@ -37,6 +22,29 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
 
     
  ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?php 
+            // this would display the post Title
+            foreach($getPost as $key=>$row):
+                $category = $row["post_categories"];
+                echo ucwords($row['post_title']); 
+            endforeach;
+        ?>
+    </title>
+    <link rel="stylesheet" href="blog.css">
+    <!-- bootstrap link start here 
+    * Bootstrap v5.3.0-alpha3 
+    -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <!-- bootstrap link ends here -->
+    <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
+</head>
+<body class=" ">
 
     <section class="mt-lg-3 py-3">
         <div class="container-lg">
@@ -64,7 +72,7 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
                             <p class="h4">
                                 <!-- Title of the post goes here from the database -->
                                 <!-- Latest News -->
-                                 <?php echo $row['post_title']; ?>
+                                 <?php echo ucwords($row['post_title']); ?>
                             </p>
                         </div>
                     </div>
@@ -196,7 +204,7 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
                         <div class="col-sm-12 px-lg-0">
                             <div class="row">
                             <?php
-                                $getPostCategory = $singlePost->relatedPost($category);
+                                $getPostCategory = $singlePost->relatedPost($category,'');
                                 
                                 foreach($getPostCategory as $key=>$row):
                             ?>
@@ -207,7 +215,7 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
                                             <div class="card-body">
                                                 <h5 class="card-title">
                                                     <!-- Card title -->
-                                                    <?php echo $row['post_title']; ?>
+                                                    <?php echo ucwords($row['post_title']); ?>
                                                 </h5>
                                             </div>
                                         </div>

@@ -117,8 +117,13 @@ class Post extends Database{
     }
 
     // related post from database ***
-    public function relatedPost($categories){
-        $stmt = $this->conn->query("SELECT * FROM post WHERE post_categories = '$categories' ORDER BY post_date ASC LIMIT 4");
+    public function relatedPost($categories, $number){
+        // below i added a conditional statement so as to chose between getting all the records in a given category or just latest top 4 records that would be used to show related post in the single post page
+        if($number == 'all'){
+            $stmt = $this->conn->query("SELECT * FROM post WHERE post_categories = '$categories' ORDER BY post_date ASC");
+        }else{
+            $stmt = $this->conn->query("SELECT * FROM post WHERE post_categories = '$categories' ORDER BY post_date ASC LIMIT 4");
+        }
         
         $result = $stmt->fetchAll();
 
