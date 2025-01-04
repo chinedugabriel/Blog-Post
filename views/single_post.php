@@ -59,7 +59,7 @@ $getPost = $singlePost->viewSinglePost($_GET['id']);
                 </div>
             </div> -->
             <div class="row ">
-                <div class="col-lg-9">
+                <div class="col-lg-9 bg-light rounded p-3 p-md-5">
                     <!-- content starts here -->
 
                     <?php 

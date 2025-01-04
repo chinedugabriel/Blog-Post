@@ -117,7 +117,7 @@
                                 foreach($result as $key=>$row):
                             ?>
 
-                            <div class="row mb-5">
+                            <div class="row mb-5 bg-light rounded p-4">
                                 <div class="col-md-12">
                                     <div class="row mb-2">
                                         <div class="col-sm-12 p-lg-0">
@@ -150,7 +150,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12 p-lg-0 ">
-                                            <img src="<?php echo '.'. ltrim($row['post_image'],'.'); ?>" alt="blog_post_image" class="img-thumbnail w-100 " >
+                                            <img src="<?php echo '.'. ltrim($row['post_image'],'.'); ?>" alt="blog_post_image" class="img-fluid w-100 " >
                                            
                                         </div>
                                     </div>

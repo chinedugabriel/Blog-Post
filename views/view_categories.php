@@ -51,7 +51,7 @@ $getPost = $categoryPost->relatedPost($_GET['category'],'all');//($_GET['id']);
             </div>
             <div class="row">
                 <div class="col-lg-9">
-                    <div class="row">
+                    <div class="row ">
                         <div class="col-sm-12">
                             <!-- main news content goes here -->
 
@@ -59,7 +59,7 @@ $getPost = $categoryPost->relatedPost($_GET['category'],'all');//($_GET['id']);
                                 foreach($getPost as $key=>$row):
                             ?>
 
-                            <div class="row mb-5">
+                            <div class="row mb-5 bg-light rounded p-3 p-md-5">
                                 <div class="col-md-12">
                                     <div class="row mb-2">
                                         <div class="col-sm-12 p-lg-0">
