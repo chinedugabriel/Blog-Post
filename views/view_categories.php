@@ -19,20 +19,21 @@
     $menuDynamic = "true";
     include_once "../include/user_menu.inc.php";
 
+    // This conditional statement checks if there's an category string assigned to the category list from the menu before accessing this page which shows all post in this chosen category.. 
     
-// if(empty($_GET['id'])){
-//     header("location: http://localhost/php_projects/Blog-Post/");
+if(empty($_GET['category'])){
+    header("location: http://localhost/php_projects/Blog-Post/");
     
-// }else{
+}else{
     // link to the post model class
     include '../models/Post.php';
 
 $categoryPost = new Post();
 
-$getPost = $categoryPost->relatedPost($_GET['category'],'all');//($_GET['id']);
+$getPost = $categoryPost->relatedPost($_GET['category'],'all');
 
 
-// }
+}
 
 
     
