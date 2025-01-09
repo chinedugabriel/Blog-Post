@@ -1,5 +1,5 @@
 <!-- 
-    this would be part of the dashboard where the admin would be able to see all the post in an admin dashboard in a tabler form 
+    this would be part of the dashboard where the admin would be able to see all the post in an admin dashboard in a table form 
 
     1: admin should be able to update a single post.
 
@@ -7,6 +7,15 @@
 
     3: the admin should be able to change the status of a post to draft or publish.
  -->
+<?php
+
+    include_once "../models/Post.php";
+
+    $getPost = new Post();
+
+    $viewAllPost = $getPost->viewPost();
+
+?>
 
  <!DOCTYPE html>
 <html lang="en">
@@ -96,27 +105,41 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <!-- getting all post from the database starts here -->
+                                            <?php foreach($viewAllPost as $key=>$row): ?>
                                             <tr class="text-center">
-                                                <td>1</td>
                                                 <td>
-                                                    12/05/2024
+                                                    <!-- 1 -->
+                                                    <?= $key + 1; ?>
+                                                </td>
+                                                <td>
+                                                    <!-- 12/05/2024 -->
+                                                    <?= $row["post_date"]; ?>
                                                 </td>
                                                 <td>
                                                     <!-- this link take you to the edith page -->
                                                     <a href= "">
-                                                        Ai would change Sports in 2024
+                                                        <!-- Ai would change Sports in 2024 -->
+                                                        <?= $row["post_title"]; ?>
                                                     </a>
                                                 </td>
                                                 <td>
                                                     Sports, Entertainment
+                                                    <?= $row["post_categories"]; ?>
                                                 </td>
                                                 <td>
-                                                    Published
+                                                    <!-- Published -->
+                                                    <?= $row["post_status"]; ?>
                                                 </td>
                                                 <td>
                                                     <!-- confirmation icon for slider -->
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill text-success" viewBox="0 0 16 16">
+                                                    <a href="">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill <?php 
+                                                        if($row['post_slider_status']=='show'){
+                                                            echo 'text-success';
+                                                        }else{
+                                                            echo 'text-danger';
+                                                        } ?>" viewBox="0 0 16 16">
                                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
                                                         </svg>
                                                     </a>
@@ -132,82 +155,9 @@
                                                     </a>
                                                 </td>
                                             </tr>
-                                            <tr class="text-center">
-                                                <td>
-                                                    2
-                                                </td>
-                                                <td>
-                                                    12/05/2024
-                                                </td>
-                                                <td>
-                                                    <!-- this link would be used to edith each post -->
-                                                    <a href= "">
-                                                        Politics will change Nigeria in 2024
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    Sports, Entertainment
-                                                </td>
-                                                <td>
-                                                    Published
-                                                </td>
-                                                <td>
-                                                    <!-- confirmation icon for slider -->
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill text-success " viewBox="0 0 16 16">
-                                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                                        </svg>
-                                                    </a>
-                                                </td>
+                                            <?php endforeach; ?>
 
-                                                <td>
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3 text-danger " viewBox="0 0 16 16">
-                                                            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                                                        </svg>   
-
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="text-center">
-                                                <td>
-                                                    3
-                                                </td>
-                                                <td>
-                                                    12/05/2024
-                                                </td>
-                                                <td>
-                                                    <!-- this link take you to the edith page -->
-                                                    <a href= "">
-                                                        Ai would change Sports in 2024
-                                                    </a>
-                                                </td>
-                                                <td>
-                                                    Sports, Entertainment
-                                                </td>
-                                                <td>
-                                                    Published
-                                                </td>
-                                                <td>
-                                                    <!-- confirmation icon for slider -->
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill text-success" viewBox="0 0 16 16">
-                                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                                        </svg>
-                                                    </a>
-                                                </td>
-
-                                                <td>
-                                                    <!-- Delete icon -->
-                                                    <a href="#">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3 text-danger " viewBox="0 0 16 16">
-                                                            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
-                                                        </svg>   
-
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            <tr class="text-center">
+                                            <!-- <tr class="text-center">
                                                 <td>
                                                     4
                                                 </td>
@@ -215,7 +165,7 @@
                                                     12/05/2024
                                                 </td>
                                                 <td>
-                                                  <!-- this link take you to the edith page -->
+                                                  <-- this link take you to the edith page ->
                                                     <a href= "">
                                                         Ai would change Sports in 2024
                                                     </a>
@@ -227,7 +177,7 @@
                                                     Published
                                                 </td>
                                                 <td>
-                                                    <!-- confirmation icon for slider -->
+                                                    <-- confirmation icon for slider ->
                                                     <a href="#">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill text-danger" viewBox="0 0 16 16">
                                                             <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
@@ -236,14 +186,14 @@
                                                 </td>
 
                                                 <td>
-                                                    <!-- Delete icon -->
+                                                    <-- Delete icon ->
                                                     <a href="#">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3 text-danger " viewBox="0 0 16 16">
                                                             <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
                                                         </svg>   
                                                     </a>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
                                         </tbody>
                                     </table>
                                 </div>
