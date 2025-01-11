@@ -139,7 +139,7 @@
                                     <p class="text-primary p-0">
                                         Input Categories:
                                     </p>
-                                    <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="categoriesInput" id="categories" list="category-list">
+                                    <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="categoriesInput" id="categories" list="category-list" value="<?= $row['post_categories'] ?>">
                                     <datalist id="category-list" class="">
                                         <option value="Sports" class="">Sports</option>
                                         <option value="Entertainment" class="">Entertainment</option>

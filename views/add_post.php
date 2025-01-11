@@ -84,9 +84,9 @@
                             <div class="col-md-4 d-flex flex-column gap-3 gap-md-0 justify-content-between py-3 px-5 ">
                             <div class="row d-flex flex-row justify-content-between">
                                     <div class="col-sm-5 my-1 px-0 my-sm-0">
-                                        <select class="form-select" name="postInputStatus" id="post-status-dropdown">
-                                            <option class="post-status text-danger" value="draft" onclick="changeDropdownText()"> Draft</option>
-                                            <option class="text-success" value="publish" onclick="changeDropdownText()"> Publish</option>
+                                        <select class="form-select" name="postInputStatus" id="edithPage-post-status-dropdown">
+                                            <option class="post-status text-danger" value="draft" > Draft</option>
+                                            <!-- <option class="text-success" value="publish" > Publish</option> -->
                                         </select>
                                     </div>
                                     <div class="col-sm-5 my-1 px-0 my-sm-0">
