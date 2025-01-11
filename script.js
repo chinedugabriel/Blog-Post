@@ -24,14 +24,23 @@ function funEdithStatus(){
 }
 
 // this function changes the dropdown option for post status
+if(edithStatusDropdownBTN.value == "draft"){
+    edithStatusDropdownBTN.removeAttribute("class","text-success form-select");
+    edithStatusDropdownBTN.setAttribute("class","text-danger form-select");
+}else{
+    edithStatusDropdownBTN.removeAttribute("class","text-danger form-select");
+    edithStatusDropdownBTN.setAttribute("class","text-success form-select");
+}
+
+edithStatusDropdownBTN.addEventListener('click',changeDropdownText)
 function changeDropdownText(){
     
-    if(dropDownStatus.value == "draft"){
-        dropDownStatus.removeAttribute("class","text-success form-select");
-        dropDownStatus.setAttribute("class","text-danger form-select");
+    if(edithStatusDropdownBTN.value == "draft"){
+        edithStatusDropdownBTN.removeAttribute("class","text-success form-select");
+        edithStatusDropdownBTN.setAttribute("class","text-danger form-select");
     }else{
-        dropDownStatus.removeAttribute("class","text-danger form-select");
-        dropDownStatus.setAttribute("class","text-success form-select");
+        edithStatusDropdownBTN.removeAttribute("class","text-danger form-select");
+        edithStatusDropdownBTN.setAttribute("class","text-success form-select");
     }
 
 }
