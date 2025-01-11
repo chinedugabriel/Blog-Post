@@ -1,14 +1,26 @@
+<?php
+    include_once "../models/Post.php";
+
+
+    if(empty($_GET['id'])){
+        header('location: http://localhost/php_projects/Blog-Post/views/all_post');
+    }else{
+        $getPost = new Post();
+        $view_single_post = $getPost->viewSinglePost($_GET['id']);
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edith Post</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="http://localhost/php_projects/Blog-Post/blog.css">
     <!-- bootstrap link start here 
     * Bootstrap v5.3.0-alpha3 
     -->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost/php_projects/Blog-Post/bootstrap/css/bootstrap.css">
     <!-- bootstrap link ends here -->
     <link rel="shortcut icon" href="../src/img/favicon.ico" type="image/x-icon">
 </head>
@@ -70,23 +82,34 @@
                             </div>
                         </div>
                         <div class="row border border shadow">
+                            <?php
+                                foreach($view_single_post as $key=>$row):
+                            ?>
                             <div class="col-md-8 d-grid gap-3 py-3 px-5 border-end">
                                 <div class="row">
                                     <p class="display-5 text-primary m-0">
                                         Title
                                     </p>
-                                    <input type="text" class="form-control rounded rounded-0" name="postInputTitle" placeholder="Title" required>
+                                    <input type="text" class="form-control rounded rounded-0" name="postInputTitle" placeholder="Title" value="<?= $row['post_title']?>" required>
                                 </div>
                                 <div class="row">
-                                    <textarea class="form-control rounded rounded-0" name="postInputDescription" id="" rows="10" cols="" placeholder="Description"></textarea>
+                                    <textarea class="form-control rounded rounded-0" name="postInputDescription" id="" rows="10" cols="" placeholder="Description"><?= $row['post_description']; ?>
+                                    </textarea>
                                 </div>
                             </div>
                             <div class="col-md-4 d-flex flex-column gap-3 gap-md-0 justify-content-between py-3 px-5 ">
                             <div class="row d-flex flex-row justify-content-between">
                                     <div class="col-sm-5 my-1 px-0 my-sm-0">
-                                        <select class="form-select" name="postInputStatus" id="post-status-dropdown">
-                                            <option class="post-status text-danger" value="draft" onclick="changeDropdownText()"> Draft</option>
-                                            <option class="text-success" value="publish" onclick="changeDropdownText()"> Publish</option>
+                                        <select class="form-select" name="postInputStatus" id="edithPage-post-status-dropdown">
+                                            <?php
+                                                if($row['post_status']=='draft'){
+                                                    echo '                    <option class="post-status text-danger" value="draft" > Draft</option>';
+                                                }else if($row['post_status']=='publish'){
+                                                    echo '<option class="text-success" value="publish"> Publish</option>';
+                                                }
+                                            ?>
+
+                                            
                                         </select>
                                     </div>
                                     <div class="col-sm-5 my-1 px-0 my-sm-0">
@@ -130,6 +153,7 @@
                                  -->
 
                             </div>
+                            <?php endforeach; ?>
                         </div>
                     </form>
                 </div>
@@ -138,7 +162,7 @@
     </section>
 
 
-<script src="bootstrap/js/bootstrap.js"></script>
-<script src="../script.js"></script>
+<script src="http://localhost/php_projects/Blog-Post/bootstrap/js/bootstrap.js"></script>
+<script src="http://localhost/php_projects/Blog-Post/script.js"></script>
 </body>
 </html>

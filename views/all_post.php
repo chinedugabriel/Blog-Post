@@ -118,7 +118,7 @@
                                                 </td>
                                                 <td>
                                                     <!-- this link take you to the edith page -->
-                                                    <a href= "">
+                                                    <a href= "http://localhost/php_projects/Blog-Post/views/edith_post?id=<?= $row['post_id'];?>">
                                                         <!-- Ai would change Sports in 2024 -->
                                                         <?= $row["post_title"]; ?>
                                                     </a>

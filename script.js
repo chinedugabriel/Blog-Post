@@ -12,6 +12,17 @@ let imgPreviewText = document.getElementById('img-message');
 // veriable for the post page checkbox
 let sliderCheckBox = document.getElementById('slider-checker');
 
+// This veriable is used in the Edith Post Page 
+let edithStatusDropdownBTN = document.getElementById('edithPage-post-status-dropdown');
+
+edithStatusDropdownBTN.addEventListener('click',funEdithStatus);
+
+function funEdithStatus(){
+    // this function enables us to replace the inner element that was previously placed based on the output of the database
+    edithStatusDropdownBTN.innerHTML = '<option class="post-status text-danger" value="draft" > Draft</option> <option class="text-success" value="publish" > Publish</option>';
+    edithStatusDropdownBTN.removeEventListener('click',funEdithStatus);
+}
+
 // this function changes the dropdown option for post status
 function changeDropdownText(){
     
