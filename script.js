@@ -2,7 +2,7 @@
 
 let dropDownStatus = document.getElementById('post-status-dropdown');
 
-// Veriables for displaying image priview for post page
+// Veriable for displaying image preview for post page
 let imgUploadInput = document.getElementById("upload-img");
 
 let imagePostPreview = document.getElementById("imgPreview");
@@ -11,6 +11,12 @@ let imgPreviewText = document.getElementById('img-message');
 
 // veriable for the post page checkbox
 let sliderCheckBox = document.getElementById('slider-checker');
+
+// for categories in the add post and edith post page respectively
+
+let selectCategoryOptions = document.getElementById('select-category');
+let categoryValueList = document.getElementsByClassName('category-value-list');
+let inputCategories = document.getElementById('input-categories');
 
 // This veriable is used in the Edith Post Page 
 let edithStatusDropdownBTN = document.getElementById('edithPage-post-status-dropdown');
@@ -74,8 +80,34 @@ sliderCheckBox.addEventListener('change',()=>{
         sliderCheckBox.value = 'show';
         // console.log(sliderCheckBox.value);
     }else{
-        sliderCheckBox.value = 'hide'
+        sliderCheckBox.value = 'hide';
         // console.log(sliderCheckBox.value);
     }
 });
 
+
+
+// Category selection 
+let selectOptionValueList = [];
+for(let i= 0; i < categoryValueList.length; i++ ){
+    categoryValueList[i].addEventListener('click',()=>{
+        inputCategories.value += ', ' + categoryValueList[i].value;
+    });
+    selectOptionValueList.push(categoryValueList[i].value);
+}
+
+inputCategories.addEventListener('input',()=>{
+    // console.log('working');
+    // let rst = inputCategories.value;
+    // rst = rst.split(',');
+
+    // rst = rst.slice(indexOf(','),)
+
+    // console.log(rst);
+    // console.log(selectOptionValueList);
+    // next focus
+});
+
+
+
+// inputCategories

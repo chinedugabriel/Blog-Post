@@ -104,16 +104,16 @@
                                         <div id="imgPreview" class="border shadow-sm d-flex justify-content-center align-items-center image-preview-box" style=" width: 70%;height: 150px; background-repeat: no-repeat; background-size:contain; background-position: center;"><p id="img-message" class="text-primary  h2">Preview Image</p></div>
                                     </div>
                                 </div>
-                                <div class="row ">
+                                <div class="row p-md-0">
                                     <div class="col-sm-12 p-0">
-                                        <p class="text-primary">
+                                        <p class="text-primary m-md-0">
                                             Add Post to slider : &nbsp;
                                             <input type="checkbox" name="postInputSliderStatus"id="slider-checker" class="form-check-input" value="hide" >
                                         </p>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <p class="text-primary p-0">
+                                    <p class="text-primary px-md-0">
                                         Input Categories:
                                     </p>
                                     <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="categoriesInput" id="categories" list="category-list">

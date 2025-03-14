@@ -90,15 +90,15 @@
                                     <p class="display-5 text-primary m-0">
                                         Title
                                     </p>
-                                    <input type="text" class="form-control rounded rounded-0" name="postInputTitle" placeholder="Title" value="<?= $row['post_title']?>" required>
+                                    <input type="text" class="form-control rounded rounded-0" name="postInputTitle" placeholder="Title" value="<?= $row['post_title'];?>" required>
                                 </div>
                                 <div class="row">
                                     <textarea class="form-control rounded rounded-0" name="postInputDescription" id="" rows="10" cols="" placeholder="Description"><?= $row['post_description']; ?>
                                     </textarea>
                                 </div>
                             </div>
-                            <div class="col-md-4 d-flex flex-column gap-3 gap-md-0 justify-content-between py-3 px-5 ">
-                            <div class="row d-flex flex-row justify-content-between">
+                            <div class="col-md-4 d-flex flex-column  gap-md-0 justify-content-between py-3 px-5 ">
+                                <div class="row d-flex flex-row justify-content-between">
                                     <div class="col-sm-5 my-1 px-0 my-sm-0">
                                         <select class="form-select" name="postInputStatus" id="edithPage-post-status-dropdown">
                                             <?php
@@ -119,27 +119,41 @@
                                 
                                 <div class="row">
                                     <p class="text-primary p-0">Add an Image to Post</p>
-                                    <input type="file" class="form-control" name="imageInput" id="upload-img" >
+                                    <input type="file" class="form-control" name="imageInput" id="upload-img" value="<?php echo $row['post_image']; ?>" >
                                 </div>
                                 <div class="row ">
                                     <div class="col-sm-12 p-0">
                                         <!-- imgPreview is used to show the image in the file input -->
-                                        <div id="imgPreview" class="border shadow-sm d-flex justify-content-center align-items-center image-preview-box" style=" width: 70%;height: 150px; background-repeat: no-repeat; background-size:contain; background-position: center;"><p id="img-message" class="text-primary  h2">Preview Image</p></div>
+                                        <div id="imgPreview" class="border shadow-sm d-flex justify-content-center align-items-center image-preview-box" style=" width: 70%;height: 150px; background-repeat: no-repeat; background-size:contain; background-position: center; background-image:url('<?php if(isset($row['post_image'])){echo $row['post_image'];} ?>');"><?php if(empty($row['post_image'])){ echo '<p id="img-message" class="text-primary  h2">Preview Image</p>';} ?></div>
                                     </div>
                                 </div>
-                                <div class="row ">
-                                    <div class="col-sm-12 p-0">
-                                        <p class="text-primary">
+                                <div class="row px-md-0">
+                                    <div class="col-sm-12 px-md-0">
+                                        <p class="text-primary m-md-0">
                                             Add Post to slider : &nbsp;
-                                            <input type="checkbox" name="postInputSliderStatus"id="slider-checker" class="form-check-input" value="hide" >
+                                            <input type="checkbox" name="postInputSliderStatus"id="slider-checker" class="form-check-input" value="<?= $row['post_slider_status']; ?>" <?php if($row['post_slider_status'] == 'show'){echo 'checked';} ?> >
                                         </p>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row p-0">
                                     <p class="text-primary p-0">
-                                        Input Categories:
+                                        Select Categories:
                                     </p>
-                                    <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="categoriesInput" id="categories" list="category-list" value="<?= $row['post_categories'] ?>">
+                                        <div class="col-md-12 px-md-0">
+                                            <select name="" id="select-category" class="form-select">
+                                                <option value="Sports" class="category-value-list">Sports</option>
+                                                <option value="Entertainment" class="category-value-list">Entertainment</option>
+                                                <option value="Politics" class="category-value-list">Politics</option>
+                                                <option value="Nature" class="category-value-list">Nature</option>
+                                            </select>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 px-md-0">
+                                        <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="categoriesInput" id="input-categories" list="category-list" value="<?= $row['post_categories']; ?>">
+                                    </div>
+                                </div>
+
                                     <datalist id="category-list" class="">
                                         <option value="Sports" class="">Sports</option>
                                         <option value="Entertainment" class="">Entertainment</option>
