@@ -113,16 +113,47 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <p class="text-primary px-md-0">
-                                        Input Categories:
-                                    </p>
-                                    <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="categoriesInput" id="categories" list="category-list">
-                                    <datalist id="category-list" class="">
-                                        <option value="Sports" class="">Sports</option>
-                                        <option value="Entertainment" class="">Entertainment</option>
-                                        <option value="Politics" class="">Politics</option>
-                                        <option value="Nature" class="">Nature</option>
-                                    </datalist>
+                                    <div class="col-md-12 px-0">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row g-1">
+                                                    <div class="col-8">
+                                                        <input type="text" id="categories-input" class="form-control  focus-ring focus-ring-light " readonly>
+                                                    </div>
+                                                    <div class="col-4 ">
+                                                        <button type="button" class="btn btn-outline-danger form-control" id="clear-input-category">Clear <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                                            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row my-3">
+                                            <div class="col-md-12">
+                                                <p class="text-primary mb-0">
+                                                    Select category:
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row g-1">
+                                            <div class="col-8">
+                                                <select name="" id="category-list" class="form-select border border-primary" >
+                                                    <!-- <option value=""></option>-->
+                                                </select>
+                                            </div>
+                                            <div class="col-4">
+                                                <button type="button" id="Add-to-input-category" class="btn btn-primary form-control">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+                                                    </svg> add
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                         
+                                    <!-- <input type="text" class="form-control" placeholder="Sports, Entertainment, Politics, Global ...." name="categoriesInput" id="categories" list="category-list"> -->
+
                                 </div>
                                 <!-- 
                                     To save the post to draft which the user can use later you can use the same database table but have a column in the table as display status where the value would either be publish or draftBut remember when we want to display from the table we would use the row Ie(Display status) to get our data from the database for the index page or Blog page which all site visitors can see
