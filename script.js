@@ -12,6 +12,12 @@ let imgPreviewText = document.getElementById('img-message');
 // veriable for the post page checkbox
 let sliderCheckBox = document.getElementById('slider-checker');
 
+// veriables for category input ***
+let categoryList = document.getElementById("category-list");
+let categoriesInput = document.getElementById("categories-input");
+let AddToInputCategoryBTN = document.getElementById("Add-to-input-category");
+let clearInputCategoryBTN = document.getElementById("clear-input-category");
+
 // for categories in the add post and edith post page respectively
 
 let selectCategoryOptions = document.getElementById('select-category');
@@ -96,18 +102,35 @@ for(let i= 0; i < categoryValueList.length; i++ ){
     selectOptionValueList.push(categoryValueList[i].value);
 }
 
-inputCategories.addEventListener('input',()=>{
-    // console.log('working');
-    // let rst = inputCategories.value;
-    // rst = rst.split(',');
+// inputCategories.addEventListener('input',()=>{
 
-    // rst = rst.slice(indexOf(','),)
+// });
 
-    // console.log(rst);
-    // console.log(selectOptionValueList);
-    // next focus
+
+arrList = ['entertainment','politics', 'sports','gossip','comedy','global','global news','africa'];
+
+let rst = [];
+arrList.forEach((val)=>{
+     categoryList.innerHTML += `<option value="${val}">${val}</option>`;
 });
 
+let result = [];
 
+AddToInputCategoryBTN.addEventListener("click",()=>{
+    rst.push(categoryList.value);
+
+    // remove items for 
+    let categorySet = [...new Set(rst)];
+    categoriesInput.value = categorySet.toString();
+
+
+
+    // clear input category
+    clearInputCategoryBTN.addEventListener('click',()=>{
+        rst = [];
+        categoriesInput.value = "";
+    });
+    
+});
 
 // inputCategories
