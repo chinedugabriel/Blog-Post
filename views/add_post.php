@@ -116,9 +116,14 @@
                                     <div class="col-md-12 px-0">
                                         <div class="row">
                                             <div class="col-md-12">
+                                                <div class="row">
+                                                    <p class="text-primary">
+                                                        Preview Categories:
+                                                    </p>
+                                                </div>
                                                 <div class="row g-1">
                                                     <div class="col-8">
-                                                        <input type="text" id="categories-input" class="form-control  focus-ring focus-ring-light " readonly>
+                                                        <input type="text" id="categories-input" class="form-control  focus-ring focus-ring-light " name="categoriesInput" readonly>
                                                     </div>
                                                     <div class="col-4 ">
                                                         <button type="button" class="btn btn-outline-danger form-control" id="clear-input-category">Clear <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
