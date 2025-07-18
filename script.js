@@ -107,7 +107,7 @@ for(let i= 0; i < categoryValueList.length; i++ ){
 // });
 
 
-arrList = ['entertainment','politics', 'sports','gossip','comedy','global','global news','africa'];
+arrList = [' entertainment',' politics', ' sports',' gossip',' comedy',' global',' global news',' africa'];
 
 let rst = [];
 arrList.forEach((val)=>{
